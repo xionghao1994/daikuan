@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>详情中心</title>
+	<link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		.mui-content{
+			background-color:#fff;
+		}
+		.index{
+			width:27px;
+			height:27px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAMAAAC7m5rvAAAAM1BMVEWZmZmampqampqZmZmZmZmZmZmZmZlHcEyZmZmrq6uZmZmZmZmZmZmZmZn9/f28vLzj4+PxFRDWAAAADXRSTlOAJhdmTzoJAHQCwJrhCvPoMgAAAhxJREFUSMetluu6rCAIhhVPYNnM/V/t9pRJmbXm2fyZU+/wAQoIdzUCoxWiEIhKG6DBI+LyjdQR6A21pAeMjBIDU4YmGEms/28kWCIL0lTfKG8xUIXh0RAUUsEYy67Q2EGODJ4cNox0+ssRlMya9KumM5YppoP7oxxB40RHaesmZnXHVUwzCTcO80M9Jo8vZpY4eWCAj75aKAgNi9Eq616YTU9WjJJEcK8MqsyERYnGvbRYP6SMpXe7RL/6Vgc7iJZs8SEcqc4ZrCGaX3x+DatfNIzciZR8pCNX4WILiyCFJCOmecmW/enPd9u27yeDwIunnUg09KWp1DcTkU0vq2TJRBLQa4yYP0n8fAPnsh9hmEZSYWze9iqN0KxoJoRtG3Kiz6UWaj+de2A32NoSEFOvRJcRmbN4gwXV5yRhVbYMU/PtPCcs2h7qHAstKbV51k/4gO2Zo9wWm8jlAdO9yCMl/gHDPiVHAdaXWC5AKzeJ9R2Wy30crtjRpjqX/nABv24zj6I7yvziEPgnrlwcfk3jTLv1J/trypvC5IwtvCm4c78bl321vAWxhnd/yKrE1vDO7ZUaFtsden5t6Giv7tTMC7aUCa55zbpmfhod1RvWLlzuGl1HRxH890FF9NtYrKObnn3xIVyH959H/tOCUVek84IR48sLi6HZOmPougXRi+WJ/t+qls7p/WLI5Z+311/W0LKK/rD0vl2x/wHsQ1NkZl1D6AAAAABJRU5ErkJggg==") no-repeat;
+			background-size:27px 27px;
+			display: inline-block;
+			position: absolute;
+			top:3px;
+		}
+		.xin{
+			width:27px;
+			height:27px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2BAMAAAB+a3fuAAAAMFBMVEVucP9HcExtcP9xcf9tbv9tcP9tcP9tb/9tb/9ub/9ub/9tb/9tb/9tb/9tcP9tb/8RvIHqAAAAD3RSTlOAAHMDDGEZR1QoNMOo34w3fTywAAACQElEQVQ4y42UPWsUQRjH/1ncu3jduEfMnhaXGAhpIneaQ8MVCQgKIqxY2F6aFIqQE22sLtHGKi+VjXAxolhrKyn8APcRDhF7EUVxY8bneWZfZva44L/Z3fntzDzvUJnuPZ71Zu++yReQvrS2YDS/VmTLdaTyDlxWI+Q/Wb+2/jYiuGuzKVp53pDX4AX9tWqxHXiPMhOuA6dzdhZ4lpunbgDdlAU9LChbe5hsJOxKekGqaiQbmW3gqYNUsISyYTVzggMj7Arr4I4qagmnhEXe6gir1n1mNZTUqHboUKimcaagaVwg1jdHhotfOYzLi77koYqKQlAvy39DreOuavJjnxc2PIUQc/zbQJOOWof8+MZsBWuYxia9tbXoo3lMyIVdNNlLdVHH84c61R++HzPoeBSUqtZfXg0zFnNoUEJ/kqOt47a2xEdFFfTYzPP617bNbrOhZUSc43P6x8BmbEzfR70k7PfQZp9preOBA05nupqx2JkC2xfnDWu56C/neiXZpxxL9E9lzhRb1C2HvU+Y+KCu2mbGkjTyoVeRXL602AdZId/7vumIYWEbx0xiTXqQsU+mDCnWJkfWxiPzL+fI5JZ039kmuQ2Ng5RDk9vjpMa5JpJaogtuZmFOaymtwWTjcZB8SA020wuloCac2s1r/tJAf3drPu+VoC2Js3rF7rF3eY/NCQtP6M3RnlZZT5NNo7Ngc/wMKTf+Y/awN3Bm1oI1zy6fMOtUOH5GqoY1W/2D4kyeejh2JtNWM8tf5/b+A7DakXoI3gqJAAAAAElFTkSuQmCC") no-repeat;
+			background-size:27px 27px;
+			display: inline-block;
+			position: absolute;
+			top:3px;
+		}
+		.us{
+			width:27px;
+			height:27px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAMAAAC7m5rvAAAAclBMVEVHcEyamprl5eXl5eXm5ubKysrl5eX39/fW1tbl5eXl5eWZmZnm5ubl5eXn5+fm5ubm5ubl5eWZmZmZmZmZmZnl5eXl5eXl5eXm5uaZmZmZmZmZmZmZmZnm5uaZmZmZmZmZmZmZmZnl5eWZmZm4uLj4+PiuaSaZAAAAInRSTlMAMzHrbQfjAQ+a2r8jwENV8aX07K6wh4qO/NaCimOXV3nhSlaF5gAAAoNJREFUSMetVoeSozAMtQlGBhI2lBTCpiyw//+LJ2MSJBvIXeY0EyaUZ0lPVQhfIAjjXbRv2320i8MAxN9IFm9aJps4e4dU16SdkeSq1lBfkT0/D7OtVkpvszC3uqOvRdB2N2DO6A0YEfYSnAfkbrugam9ODbXwPNGhsWI/pxCO5siTnj9Sn8zbo3cg5MbzYNntwHCVOziI8eFBr9GlD/hJzHFH/5Hvhjn6yNgwKPaNvF2K4nKT7KHBEV62yOGB6pJpN0pKgYB27qc4YLwS6pcsn6iuLilOIy+75xnGRMKh0hMKpaQHBpOZCmN5oi6kHZPK4S6y+RniP2Zi5wgzE3WEg43J+Ocp3y6soW9RSWLYyzB7aVlA6sJSVlqY15kNxplF58eFXdjr8xBi2DAa38IAydyAsNcVIh0jBURGD7qY88cDJW2Pl74dYN88N3NDYezwOAag/+17/HkBsFzGJrEyrs1S2be/Iyp1CiEzCYaWuk1CFtSzQrotByMnMPnd6gSK81BCI4kCc9MvSHl5kS/9jmQgHgz0rWzgXmEZlNUdmvLbsUZh0flG3ouRc6XGBC3vvpEOJaqyxj3sbWPvbiRpYaCEB0ClXU1wj1fNEdwQABpugIqUi1INqdUXMTCEmyVXQwNW1/TuwZOLpDLIuluUWrJUJoXjF+hcHYx6pjK9d6siaZmSplCtwyrWFKYWVK/DStaCpob3Blawhje111VGunrg5PRqr+LZzHmdecokb+bT6JBpsaxLOqNjZlAtDUY+qGbG4qw4Y/HTIfzpyP9wwUCcXVgWVjJllx1YW57EPyxPfFVjI2Z9VcMvrsuL4RX++xo6TIYPll6r8rlib5KlFfsPMpSMbONjIQUAAAAASUVORK5CYII=") no-repeat;
+			background-size:27px 27px;
+			display: inline-block;
+			position: absolute;
+			top:3px;
+		}
+    .mui-table-view:before{
+      background-color: transparent;
+    }
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="pic"></div>
+	</div>
+	<!-- 底部导航 -->
+	<nav class="mui-bar mui-bar-tab my-footer">
+		<a class="mui-tab-item active" href="index.html">
+			<span class="index"></span>
+			<span class="mui-tab-label pra">贷款</span>
+		</a>
+		<a class="mui-tab-item" href="new.html">
+			<span class="xin"></span>
+			<span class="mui-tab-label pra color" style="right:17%;">新品推荐</span>
+		</a>
+		<a class="mui-tab-item first" href="our.html">
+			<span class="us"></span>
+			<span class="mui-tab-label pra">我的</span>
+		</a>
+	</nav>
+	<!-- /底部导航 -->
+	<div class="mui-content">
+		<header>贷款</header>
+    <div style="height: 5px;background-color:#F5F5F5"></div>
+	<!-- hot -->
+	<ul class="mui-table-view">
+      <!-- <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+            <div class="mui-media-body">
+               安心贷
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan2.png">
+            <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a> -->
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+           <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+            <div class="mui-media-body">
+               安心贷
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan2.png">
+            <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+           <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+            <div class="mui-media-body">
+               安心贷
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan2.png">
+            <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+           <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+  </ul>
+  <!-- /hot -->
+  <!--新品推荐  -->
+  <div style="display: none">
+  <header>新品推荐</header>
+    <div style="height: 5px;background-color:#F5F5F5"></div>
+    <div class="new_tu">
+      <img src="images/xinpin.png" alt=""/>
+    </div>
+    <p style="text-align: center;">新品正在赶来的路上~</p>
+  </div>
+  <!--/新品推荐  -->
+	</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(unescape("%3Cscript src='assets/jquery.min.js'%3E%3C/script%3E"))</script>
+<script src="assets/flexible/flexible.js"></script>
+<script type="text/javascript">
+// 不可改动
+$(function(){$("body").on("tap","a",function(){location.href=$(this).attr("href")});$("a").on("tap",function(){$(this).addClass("active").siblings("li").removeClass("active")})});
+// 不可改动
+document.onreadystatechange = function(){
+	if(document.readyState =="complete"){
+		$(".loading").fadeOut();
+	}
+}
+const URL ='http://192.168.10.166:3000/'
+  $.ajax({
+    url:URL+'goods',
+    type:'GET',
+    dataType:'json',
+    success:function(data){
+        console.log(data)
+       var str ='';
+       $.each(data,function(k,v){
+          str +="<li class='mui-table-view-cell mui-media'>"
+               +"<a href='detail.html'>"
+               +"<img class='mui-media-object mui-pull-left' src="+v.image+">"
+               +"<div class='mui-media-body'>"
+               +v.name+"<p class='mui-ellipsis'>"
+               +v.number+"</p>"
+               +"<p class='mui-ellipsis'>"
+               +v.detail+"</p>"
+               +"</div>"
+               +"</a>"
+               +"</li>"
+       })
+       $(".mui-table-view").html(str);
+    }
+  })
+</script>
+</html>

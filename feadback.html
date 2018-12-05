@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>意见反馈</title>
+	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<style type="text/css">
+		body,html{
+			background-color: #F5F5F5;
+		}
+	</style>
+</head>
+<body>
+	<header><a href="javascript:history.go(-1)" class="mui-icon mui-icon mui-icon-back"></a>意见反馈</header>
+	<div class="feadback">
+		<div class="cnt">
+			<div class="fed_write"></div>
+			<div class="content">内容</div>
+		</div>
+		<div class="upload">
+		<textarea id="textarea" cols="30" rows="4" placeholder="请输入你的意见"></textarea>
+		<!-- 上传图片 -->
+		 <div class="box">
+	     </div>
+		</div>
+		<!-- /上传图片 -->
+		<div class="cnt1">
+			<div class="fed_tel"></div>
+			<div class="content">联系方式</div>
+		</div>
+		<input type="text" placeholder="请输入您的手机号或邮箱" maxlength="11" />
+		<div class="button">提交</div>
+	</div>
+</body>
+<script src="assets/flexible/flexible.js"></script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(unescape("%3Cscript src='assets/jquery.min.js'%3E%3C/script%3E"))</script>
+<script src="js/imgFileupload.js"></script>
+<script>
+	var imgFile = new ImgUploadeFiles('.box',function(e){
+			this.init({
+				MAX : 3, //限制个数
+				MH : 5800, //像素限制高度
+				MW : 5900, //像素限制宽度
+				callback : function(arr){
+					console.log(arr)
+				}
+			});
+		});
+</script>
+</html>

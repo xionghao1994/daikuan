@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>登录页</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			background-color: #fff;
+		}
+		.main{
+			width:85%;
+			margin:0 auto;
+			display: -webkit-flex;
+			-webkit-flex-direction: column;
+		}
+		.main .head{
+			width:100%;
+			margin-top: 40%;
+		}
+		.main .head h1{
+			font-weight: 400;
+			font-size: 0.8rem;
+		}
+		form{
+			width:100%;
+		}
+		input{
+			width:100%;
+			height:40px;
+			outline: none;
+			border:none;
+			border-bottom:0.5px solid #ccc;
+			line-height:40px;
+			font-size:0.4rem;
+			text-indent: 25px;
+		}
+		input[type="button"]{
+			width:30%;
+			height: 30px;
+			color:#6D6FFF;
+			font-size: 14px;
+			line-height: 30px;
+			background-color: #fff;
+			border-left:1px solid #ccc !important;
+			border-bottom:none;
+			text-indent: 0px !important;
+			position: absolute;
+			top:2px;
+			left:70%;
+		}
+		input::-webkit-input-placeholder,
+		input::-Gecko-input-placeholder,
+		input::-Trident-input-placeholder,
+		input::-Presto-input-placeholder,
+		input::-moz-input-placeholder,{
+			color:#f1f1f1;
+		}
+		.button{
+			width:100%;
+			height:44px;
+			color:#fff;
+			line-height: 44px;
+			border-radius: 5px;
+			margin:16% auto;
+			text-align: center;
+			background-color: #E4E4EE;
+			font-size:0.466667rem;
+		}
+		p{
+			text-align: center;
+			position:fixed;
+			color:#333;
+			left:50%;
+			transform: translate(-50%);
+			bottom:25px;
+			margin:0 auto;
+			font-size: 0.36rem;
+			width:100%;
+		}
+		.number{
+			width: 100%;
+			position: relative;
+			margin-top: 50px;
+		}
+		.code{
+			margin-top: 20px !important;
+			position: relative;
+		}
+		.phone{
+			width:0.293333rem;
+			height:0.44rem;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAABCBAMAAADeVCkYAAAAIVBMVEVtb/9HcExtb/9tcP9ubv9tb/9sb/9qav9tbf9tb/9sb//vuxcYAAAAC3RSTlPjANFgYteOHDa+U1ORG00AAACVSURBVDjLYxBsUw1FA0EZggwiDFiAIUMDNmEOhgSGZBc0YMbAxqDAJogBEjgZFJgxhQ2YRoVHhUeFB6MwSzkGcAAKYysKSBbmTMMAE4hwoHghNmHxBLZCLMKSDAwTsQgDyzIOLMILGBi4sAgXMDCwYxEGlpOO2BzYlkE4YCdgLx5xFKY4il5hbMILGQTbpqIX65EZggCcGIDF/XQkAAAAAABJRU5ErkJggg==") no-repeat;
+			background-size:0.293333rem 0.44rem;
+			display: inline-block;
+			position: absolute;
+			top:10px;
+			left:0px;
+		}
+		.encryption{
+			width:0.373333rem;
+			height:0.426667rem;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABACAMAAAB4KUSAAAAAM1BMVEVHcExtb/9tb/9tb/9scP9tb/9rcP9tb/9tb/9rbP9tb/9tb/9tb/9tb/9rbv9sb/9tb//7s28AAAAAEHRSTlMA6EuNNPAl2vkSd5vErBxh13TebQAAAgFJREFUSMfdl9tyxCAIhhXFU9Ts+z9thWyTbCPG9KYz5dZ8wiD8EKV6FsEUr1H7vEBU0wYlvA7DYucwm7+RHc9uglv4U2/A1ljtuni+It1hlb4Lyzk4WwhdxpzzvcDA35GRvuhEFcmpGYB0voonID9D3x9bi8WLYDss4iMFKRh2GOromSSXeZgA11z2SyiKJ/u9SYrUj94qSRlIg9QMLzbjN1auNYqUtmEptxyE+M/BVpH+V8lRcY0SaNyNXUvZmXxWNtEwm7M+1DJFva3sfq1mJdP3huxAv3vBIinUnGJXINVFJmPzh/BA55sfH7dsolMPjFTEcNGLYiLYyhrT2jCrh+bJV7krmH7rFqJtf9Z5RF9AEIMsgMesy71TUpEuuJ4qKazzIPCsg1phaTcEmAUjPbE7Bp+Ok2BLGu6F7PCadgnUH5+mq54KYKuls7jQaKhT4E/Jvn4xD8IUaD+1nnI851Hhhwu4zgwJ/By+/rqqSCC1aInHphLcbMkZWsqANbi7+chFzgudzhn725gMqrS3B6YnbdV00Ohti+wtMCNwi1fY/G5AeSn4IzCL++QigqxyRTxeRYlnXU3yJgbSKNJ0ZQ2Ppbz5wsh+AzzhYJtWvMGHB/OKqpHnIwvgK68uTpjldtHfoqs3rZ+w7Tdo78+4PNg60JyFvaasccJ8Tu92+QKJyjA62YC5sAAAAABJRU5ErkJggg==") no-repeat;
+			background-size:0.373333rem 0.426667rem;
+			display: inline-block;
+			position: absolute;
+			top:10px;
+			left:0px;
+		}
+		.layui-m-layercont{
+			padding:30px 20px !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="head">
+			<h1>登录</h1>
+		</div>
+		<form>
+			<div class="number"><i class="phone"></i><input type="text" placeholder="请输入真实有效的手机号码" id="phone" onkeyup="nextBtn()" maxlength="11"></div>
+			<div class="code"><i class="encryption"></i><input type="text" placeholder="请输入短信验证码" maxlength="6"><input type="button" id="sendCode" value="获取验证码"></div>
+		</form>
+		<div class="button" id="button">登录</div>	
+	</div>
+	<p>点击登录代表您同意<a href="" style="color:#6D6FFF;text-decoration: none;">《用户服务协议》</a></p>
+</body>
+<script src="assets/flexible/flexible.js"></script>
+<script src="assets/layer_mobile/layer.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(unescape("%3Cscript src='assets/jquery.min.js'%3E%3C/script%3E"))</script>
+<script>
+var h = document.body.scrollHeight;
+window.onresize = function(){
+    if (document.body.scrollHeight < h) {
+        document.getElementsByTagName("p")[0].style.display = "none";
+    }else{
+        document.getElementsByTagName("p")[0].style.display = "block";
+    }
+};
+ function nextBtn() {
+	var button = document.getElementById('button');
+	var phone = $("#phone").val();
+	var reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+
+	if (reg.test(phone)) {
+		button.style.background = "#6D6FFF";
+	} else {
+		button.style.background = "#E4E4EE";
+	}
+}
+  $("#button").on("click",function(){
+  	// 页面连接后期去掉
+  	 location.href="index.html"
+  	  var phone  = $("#phone").val();
+  	  $.ajax({
+  	  	url:'',
+  	  	type:'',
+  	  	data:{'phone':phone},
+  	  	success:function(res){
+  	  		if(res.code === 0){
+
+  	  		}else{
+
+  	  		}
+  	  	}
+  	  })
+  })
+   $("#sendCode").on("click",function(){
+ 	   sendAddmes()
+ })
+	// 发送验证码
+	var AddInterValObj; //timer变量，控制时间
+	var adcount = 60; //间隔函数，1秒执行
+	var addCount;//当前剩余秒数
+
+	function sendAddmes() {
+
+	    var myreg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+	    if (!myreg.test($("#phone").val())) {
+	    	layer.open({
+			    content: '请输入有效的手机号码',
+			    btn: '我知道了'
+			  });
+	        return false;
+	    } else {
+	        var phone = $("#phone").val(); //手机号
+	        var codeType = 1;
+	        //向后台发送处理数据
+	        $.ajax({
+	            type: "POST", //用POST方式传输
+	            dataType: "JSON", //数据格式:JSON
+	            url: sen_url, //目标地址
+	            data: {'phone': phone, 'codeType': codeType},
+	            success: function (data) {
+	                if (data.code == 0) {
+	                    addCount = adcount;
+	                    //设置button效果，开始计时
+	                    $("#addSendCode").attr("disabled", "true");
+	                    $("#addSendCode").val("" + addCount + "秒后重新获取").css({"background-color": "#ccc"});
+	                    //启动计时器，1秒执行一次
+	                    AddInterValObj = window.setInterval(SetAddnTime, 1000);
+	                } else {
+	                	layer.open({
+						    content:(data.msg) ,
+						    btn: '我知道了'
+						  });
+	                }
+	            }
+	        });
+	    }
+	}
+	// timer处理函数
+	function SetAddnTime() {
+	    if (addCount == 0) {
+	        window.clearInterval(AddInterValObj);//停止计时器
+	        $("#addSendCode").removeAttr("disabled");//启用按钮
+	        $("#addSendCode").val("重新获取验证码").css({"background-color": "#fff"});
+	    }
+	    else {
+	        addCount--;
+	        $("#addSendCode").val("" + addCount + "秒后重新获取").css({"background-color": "#ccc"});
+	    }
+	}
+</script>
+</html>

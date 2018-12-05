@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>首页</title>
+	<link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		.mui-content{
+			background-color:#fff;
+			padding:0px 10px;
+		}
+		.index{
+			width:27px;
+			height:27px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAMAAAC7m5rvAAAAclBMVEVHcEy3uf+4uf+4uf+4uP+iov+3uf+oq/+4uf+np/+3uP+5uf+4uf9tb/+4uP+4uf9tb/9tb/+4uf9tb/9tcP+4uf+4uf9tcP9ub/+4uf+3uf9tcP9sbv9tcP9tb/9tb/+3uP/////Y2P9/gf+ho//x8v9mZ8jzAAAAH3RSTlMAMeTbbSKaDOwEwEP491WOeeKIklOgsMm6p2NsNKGnm++i2QAAAkRJREFUSMetVomSgyAM9QLEo9Wq1Xbb1Wr7/7+4iScgaMfZdKaD4iPhvRBiWRqzPRq4UdNEbkA92/rKQuo3kvk03MPwu9tozL3zLdTJGda/eSFhnDMSerfBt3MygkjQY864Gz7+cKfnHhkQgyucdTy2nmEeRuFrHV5gJrow/ZLsAsQ2lzUXBe58g2wbuSpUZii8vLItutgVPqHrCCnfEYeqcZ7WC+kMcQIvBDi88n0Yhzj9RQfQy2XfJB4DXgIhxOjLhLWjOUzm6BQxGHDnDIF588iyqrRK8vFBGzb68PqROw2QnLSu67h6lmmMg7TMcgUNTtz+fAE7y1Reqxb/PiR3wHo4iHEWXmfj113Tfl6f9o3jX9HjeZAY0CKNk7u2fXdd924/HTykwqGxIbrpf7FSifHd1grOQT+wxZuA+qn1Vi5JdEMKqcCjZT3i+vXS4hKRywITaylMOdBugMUTLTzEBAPVprjJE+cNsPpn1haVAyLZHOCWlbNySCIcIaPSss3iQeYLsGQHNiULR1g0B5ntwHIxyIWSagc2csJ7ShYB0h3YpFwvQDHLnaVfeRvkFpKL5+UW7Ckml5zK+ZbHTEhl5eAQs8N42N3oRzmmzIgj0jGViwL4izdDnIqCVILMsqdMLkFSwTMmWfxQC55aXidYnFZZUimiLeVVLeYDLCPiscjWxVy9OhIxlVhPUMU1V8fRi+rgtXj0Ej565R9tMA62M4ebJ7lVE8PbbtXA7ubG8P7/bejRpndwObbYke8GhWfrHP0B7xaCqP3jGqMAAAAASUVORK5CYII=") no-repeat;
+			background-size:27px 27px;
+			display: inline-block;
+			position: absolute;
+			top:3px;
+		}
+		.xin{
+			width:27px;
+			height:27px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAMAAAC7m5rvAAAAPFBMVEVHcEzAwMDMzMzMzMzMzMzMzMzNzc3Ly8u8vLzCwsLNzc3MzMyZmZmZmZmZmZnBwcGZmZmZmZmZmZmZmZlRAqCPAAAAE3RSTlMAG0UyeFJggAQOKG/Dpmdhg987WUPTyAAAAgNJREFUSMedVlmyhDAIzGIcYjTlcv+7vpBFiVn0ycdUObFD0yDAWMW4FKMZnJlRSM7eGHA1/DIz6hEJ0vwqZiT0UDI6Qm5aa45sI3Bqgnh4RU3Z1TCpcJXuuBpE5VQLf1R1KLynxpXaexSlFvj/0JFsQocKKqgW++gQI1clQwUPyRnvPOULlDPEEV244z3CiwpyuEHTW4x+U3ka76cU3xUsmy6aMBQKtc0pbiBUb0aY7XZd7Z6i8U88pyn9iaGy2u3wNiMQsqczVSbSPZ3Bcpy2AJ+vp/V0F4VQJDKCci42+rSS6FQQJGlj/dt2n4+K7ZeYg0u1+42Z1uHWfd1qsDkF4lnKK4HWHy5Hw/hVHBKpChLZbluow15aCsSm6sSQoOnsFMXzG67CQpjdHmEcM+dguiZ/mySKyJwuQCTp2H4lnMKAd1EbozBCss/SMkqSSMJ0W48z21GSkbYH3sTNmjaekaYbw2vgZsi6nECsYk84igrFRUq5yXOhL4RSJh9OS5cMFT+c7DMNuLmHSu9PeQcqcDdUagp5CypwSznPTMrDzR2DuWgh94ZXba/ps1ub7bXezANu7TRzP0iK0YE42x0djUG184dB9XIswm0sfh3CX0d+XDCmfy4YX9eZdN+/lycG+tOqRrZJXAz528Xw8xrqS6ZYesXL7cOv2G7HNrhiV0P6A/rOPLr5gKZaAAAAAElFTkSuQmCC") no-repeat;
+			background-size:27px 27px;
+			display: inline-block;
+			position: absolute;
+			top:3px;
+		}
+		.us{
+			width:27px;
+			height:27px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAMAAAC7m5rvAAAAclBMVEVHcEyamprl5eXl5eXm5ubKysrl5eX39/fW1tbl5eXl5eWZmZnm5ubl5eXn5+fm5ubm5ubl5eWZmZmZmZmZmZnl5eXl5eXl5eXm5uaZmZmZmZmZmZmZmZnm5uaZmZmZmZmZmZmZmZnl5eWZmZm4uLj4+PiuaSaZAAAAInRSTlMAMzHrbQfjAQ+a2r8jwENV8aX07K6wh4qO/NaCimOXV3nhSlaF5gAAAoNJREFUSMetVoeSozAMtQlGBhI2lBTCpiyw//+LJ2MSJBvIXeY0EyaUZ0lPVQhfIAjjXbRv2320i8MAxN9IFm9aJps4e4dU16SdkeSq1lBfkT0/D7OtVkpvszC3uqOvRdB2N2DO6A0YEfYSnAfkbrugam9ODbXwPNGhsWI/pxCO5siTnj9Sn8zbo3cg5MbzYNntwHCVOziI8eFBr9GlD/hJzHFH/5Hvhjn6yNgwKPaNvF2K4nKT7KHBEV62yOGB6pJpN0pKgYB27qc4YLwS6pcsn6iuLilOIy+75xnGRMKh0hMKpaQHBpOZCmN5oi6kHZPK4S6y+RniP2Zi5wgzE3WEg43J+Ocp3y6soW9RSWLYyzB7aVlA6sJSVlqY15kNxplF58eFXdjr8xBi2DAa38IAydyAsNcVIh0jBURGD7qY88cDJW2Pl74dYN88N3NDYezwOAag/+17/HkBsFzGJrEyrs1S2be/Iyp1CiEzCYaWuk1CFtSzQrotByMnMPnd6gSK81BCI4kCc9MvSHl5kS/9jmQgHgz0rWzgXmEZlNUdmvLbsUZh0flG3ouRc6XGBC3vvpEOJaqyxj3sbWPvbiRpYaCEB0ClXU1wj1fNEdwQABpugIqUi1INqdUXMTCEmyVXQwNW1/TuwZOLpDLIuluUWrJUJoXjF+hcHYx6pjK9d6siaZmSplCtwyrWFKYWVK/DStaCpob3Blawhje111VGunrg5PRqr+LZzHmdecokb+bT6JBpsaxLOqNjZlAtDUY+qGbG4qw4Y/HTIfzpyP9wwUCcXVgWVjJllx1YW57EPyxPfFVjI2Z9VcMvrsuL4RX++xo6TIYPll6r8rlib5KlFfsPMpSMbONjIQUAAAAASUVORK5CYII=") no-repeat;
+			background-size:27px 27px;
+			display: inline-block;
+			position: absolute;
+			top:3px;
+		}
+		.mui-content .broadcast {
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			overflow: hidden;
+			background-color: #B6B7FF;
+			margin-top: 2%;
+			border-radius: 20px;
+		}
+		.mui-content .broadcast ul{
+			display: -webkit-flex;
+			-webkit-flex-direction:column;
+		}
+		.mui-content .broadcast .mui-pull-left {
+			width: 22px;
+			height: 21px;
+			margin-left: 15px;
+			margin-top: 3%;
+			background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAYAAABvCO8sAAACcklEQVRIS7WWS4iNYRjHf39K5FIWFookshBZUhRZkVJIg2ws3MqUTC4lGZtxWRAZMaVEWSBZ2FkoSkRDNC6h5LYZsyC5jMtfz/Se6XN853yn45x3+b7P+/7e5/6IOpbtA8BmoF3SkaInbM8DDgP3VCScPbcd8nFxa2Z/lqSHld6xfQjYns57awYm2AlgE/ANGJ4eWSbpShVgG3AQOAnsrQlYBvsNLAdKkCJgMMZLeh+fKgTaHgocT5rFnXWSzth2LRqWa14VmGBngTXpYpuk8CH/BbQ9GZiU44cNwOq03yFpd0mmbqDtVuBogXm7JG0si9i/TGo7gqhfUvi44pLtz8DIKjIXQ0tJvyoBgdvAU+Btkn1U6b0Aln66DbieI/hYUn/5ftakwA2gO7nlEzBf0oM8aBZYNbyrASMPbYeVzgNLk7YzJf38J0rrdX7ePdujgZfAOGClpEtNBaZ0OQVEdHdK2mJ7MTA7gfsaZtJMurRHCQMuSGqxfRVYks6/NwN4Dlgb1UlSq+1FwJwE/NBQoO1RwGtgLLBC0uWm+dD2MCDKYAvwHJjetCgFbgE3gWnAF2CBpLuV8vAjMAboTcLlclFDuwoS/z7wBHiWuklu0g+0J9sxKkT7GVKhHEVtXCUpStzgKs9D2yMkfa1WRweAKXcmAlNyhEvd4keEtqRrmfBvSj8MrTtT8w3fLJR0J32y8cD0cFihNMv0pcLcU29JLBwxcqDvgLnAq2TeWmaaCZLeDPqwyNEZaGlEfAFMrRG4A+gATgN7atKwLDpjCN6Z2ZshqafSp23vB3YNlrZatMvJwYCuB/ZJOlb0hu3oFjGhd/8BP3RiCQBVOb8AAAAASUVORK5CYII=") no-repeat;
+			background-size: 22px 21px;
+			display: block;
+		}
+		.mui-content .broadcast li {
+			margin-left: 11px;
+			color: #fff;
+			display: inline-block;
+			font-size: 0.333333rem;
+		}
+		.sx{
+			width:100%;
+			font-size: 15px;
+			color:#333333;
+			margin-top: 12px;
+			font-family: '宋体';
+		}
+		.screen{
+			width:20px;
+			height:20px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAMAAACfvvDEAAAAZlBMVEVHcExq4Kk73sRU4LRa37M+3sJ64KBi365i3q9o4KtN37p74J9D3sA43sZ64aB84J9k361F375m4Kx84J5B38A73sRi361S37ZN37pd37BH37xX37N04KNm36sz3sh44KFv4KZq4KghcGFoAAAAE3RSTlMAhJ4KcMftWB5FNbmF3J7Z4u218uiYqAAAAWRJREFUOMuN1OEaQyAUBmAhZIYZQ4jd/01ORUpH08897746X1ueBy6SF1GRJ96/RYq3XPEf93irZaWS6vP5TGWFEMqjcZ7nXeYnmA1936/0+/0uyziOh4wCA8btMHDJ6cKpFpoaErcbnSYVOkMzBV0LUOigSddxCdPHSTqosTvdKFgA0emLdsdRzwUY22Oq03MBeqhPr6goX7vRrKbUMZVGs9pNi0STB4UKKPbbfwp5o4C4aSwKF4Cb2klV6Bp5hF5NFYlItlFXAVymjDEr1SqA7+5vsnEVIH7QT3ZJj/0RPyaTq3EUEMm/iHTMUQDabgirULiASl16zK5SeQFTqD8LzEw1jmo+TAQfqbVJrRcsIJmPG6urlpdDUGq9camvh6604mOsUwFvY/o0CuBTox6miU4z8eX+D13lSxYZil8ARPFO9yZDcQEADeRc1FefSEqAdz71XzXW70bQ0ruzBPXu0bIMf2whZVZkHYu1AAAAAElFTkSuQmCC") no-repeat;
+			background-size: 20px 20px;
+			display: inline-block;
+		}
+		.screen1{
+			width:20px;
+			height:20px;
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAArCAMAAAAniNp/AAAAgVBMVEVHcEz/fhT/rUr/cQL/eQz/bgD/jCb/ih3/kCr/rE3/uFn/ulv/s1T/tVX/eAj/ihz/uFr/tVb/qkf/cAD/uFr/tVX/pkH/t1f/oj3/bQD/uVv/eQX/tFX/lSv/jyT/dAH/r07/cAD/fQr/q0j/hxj/pkP/oz7/mjP/nzj/gxL/gA0BpBsIAAAAGXRSTlMAVUHYd/MP/i8ho+18bKTkx1PFvo3qtt7w5FmASgAAAahJREFUOMuF1NuygiAUBuClAlqeUpvaoJWZZfr+D7g5qhkaM100fS1+FgeA5SDREX6NLGTxL3NkjLm/TMVRsG3iquJqt2mCuhZqG+W1UON07mFvWdjzIUvp4BljkaXQ8yFVJr/tQmZpRvB6KaX+v+fr/G5r9NZKJeGF2OELnbr36yliyZ8CxpZ9RfyTdm+tZMskmpdCvkAXqfiEro7ERzYap295by6XrlOxRPKzQiExhyPtW0dUMirnDRD7I4ZpVTIMfQJwvSrFYxGxiwrpTQrKZuhTAF8qGT6GU2WUakhRCuVCOqlcb/VYKriVQiXg+2ZC3XmtRKnkxlXT9MRvV9QOCL4pxZc4KdnTWqMInPtdqaEflem8LnWAhApVauVPapowBI9SVUorS6wQMDWq4aq1KqACmViDPbysRLfDy0xarYY/Q0GV2gi/B0Tnyho+hsCg9fB8h4ulWobPxdmlM2ULL29MQelW+JO6z9goagn/p9+YjwmX4cfriehqeGe6nA62h58bftA9W/h08XoShJed99H3E0aQN4/lIbLysKLEwxh7XoI+JvoH+dVyvvt4e20AAAAASUVORK5CYII=") no-repeat;
+			background-size: 20px 20px;
+			display: inline-block;
+		}
+		.sx p{
+			margin-left: 5px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="pic"></div>
+	</div>
+	<!-- 底部导航 -->
+	<nav class="mui-bar mui-bar-tab my-footer">
+		<a class="mui-tab-item active" href="index.html">
+			<span class="index"></span>
+			<span class="mui-tab-label pra color">贷款</span>
+		</a>
+		<a class="mui-tab-item" href="new.html">
+			<span class="xin"></span>
+			<span class="mui-tab-label pra" style="right:17%;">新款推荐</span>
+		</a>
+		<a class="mui-tab-item first" href="our.html">
+			<span class="us"></span>
+			<span class="mui-tab-label pra">我的</span>
+		</a>
+	</nav>
+	<!-- /底部导航 -->
+	<div class="mui-content">
+	<header>贷款</header>
+	<!-- banner -->
+    <div id="slider" class="mui-slider">
+		<div class="mui-slider-group mui-slider-loop">
+			<div class="mui-slider-item">
+				<a href="javascript:;"><img src="./images/banner2.png" /></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="javascript:;"><img src="./images/banner.png" /></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="my-star.html"><img src="./images/banner2.png" /></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="javascript:;"><img src="./images/banner.png" /></a>
+			</div>
+		</div>
+		<div class="mui-slider-indicator indicator">
+		    <div class="mui-indicator mui-active"></div>
+		    <div class="mui-indicator"></div>
+		</div>
+	</div>
+ 	<!-- banner over -->
+	<!--broadcast-->
+		<div class="broadcast">
+			<a href="javascript:;" class="mui-pull-left"></a>
+			<ul id="box">
+			</ul>
+		</div>
+	<!-- /broadcast over -->
+	<!-- screen  -->
+	<div class="sx"><i class="screen"></i><p>快速筛选</p></div>
+	<ul class="filter">
+		<li><a href="list.html"><=1000</a></li>
+		<li><a href="list.html">1000-5000</a></li>
+		<li><a href="list.html">5000-10000</a></li>
+		<li><a href="list.html">>=10000</a></li>
+	</ul>
+	<ul class="partition">
+		<li><img src="data:image/png;base64,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" alt=""/><p>高通过率</p></li>
+		<li><img src="data:image/png;base64,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" alt=""/><p>快速放款</p></li>
+		<li><img src="data:image/png;base64,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" alt=""/><p>白领专区</p></li>
+		<li><img src="data:image/png;base64,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" alt=""/><p>大额专区</p></li>
+	</ul>
+	<!-- /screen  -->
+	<div class="sx pb"><i class="screen1"></i><p>热门推荐</p></div>
+	<!-- hot -->
+	<ul class="mui-table-view">
+     <!--  <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+            <div class="mui-media-body">
+               安心贷
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan2.png">
+            <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+           <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+            <div class="mui-media-body">
+               安心贷
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan2.png">
+            <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/loan1.png">
+           <div class="mui-media-body">
+               美期分期
+                <p class='mui-ellipsis'>1000元-10000元  |  日利率0.03%</p>
+                <p class='mui-ellipsis'>放款快，额度高&nbsp;&nbsp;1234人已借</p>
+            </div>
+        </a>
+      </li> -->
+    </ul>
+   <!-- /hot -->
+   <div class="Indexfooter"><p><a href="list.html" style="color:#999999;">——查看所有借款——</a></p></div>
+	</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(unescape("%3Cscript src='assets/jquery.min.js'%3E%3C/script%3E"))</script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/flexible/flexible.js"></script>
+<script type="text/javascript">
+// 不可改动
+$(function(){$("body").on("tap","a",function(){location.href=$(this).attr("href")});$("a").on("tap",function(){$(this).addClass("active").siblings("li").removeClass("active")})});
+mui.init({
+    swipeBack:true //启用右滑关闭功能
+});
+var slider = mui("#slider");
+slider.slider({
+    interval: 2000//自动轮播周期，若为0则不自动播放，默认为0；
+});
+$.ajax({
+	url:'http://192.168.10.166:3000/list',
+	type:'get',
+	success:function(data){
+		// console.log(data)
+		var str ='';
+		$.each(data, function(k,v){
+			str +="<li>"+v.id+"</li>";
+		});
+		$("#box").html(str);
+		setInterval('AutoScroll(".broadcast")', 2000);
+	 }
+})
+// 文字滚动
+function AutoScroll(obj) {
+	$(obj).find('ul:first').animate({
+		marginTop: "-40px"
+	}, 1000, function () {
+		$(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+	});
+}
+// 不可改动
+document.onreadystatechange = function(){
+	if(document.readyState =="complete"){
+		$(".loading").fadeOut();
+	}
+}
+// 事件委托
+$(".partition").on('click',function(){
+	location.href="list.html"
+})
+
+const URL ='http://192.168.10.166:3000/'
+ $.ajax({
+ 	url:URL+'goods',
+ 	type:'get',
+ 	dataType:'json',
+ 	success:function(data){
+ 		// console.log(data)
+ 	 var str ='';
+ 	 $.each(data,function(k,v){
+ 	   str +="<li class='mui-table-view-cell mui-media'>"
+           +"<a href='javascript:;'>"
+           +"<img class='mui-media-object mui-pull-left' src="+v.image+">"
+           +"<div class='mui-media-body'>"
+           +v.name+"<p class='mui-ellipsis'>"
+           +v.number+"</p>"
+           +"<p class='mui-ellipsis'>"
+           +v.detail+"</p>"
+           +"</div>"
+           +"</a>"
+           +"</li>"
+ 	 })
+ 	 $(".mui-table-view").html(str);
+ 	}
+ })
+</script>
+</html>
